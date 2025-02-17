@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <head>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+    </head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar-bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            class="animate__animated animate__backInDown"
+            src="./images/logo.png"
+            alt="Bootstrap"
+            width="160"
+            height="150"
+          />
+        </a>
+
+        <select
+          id="list"
+          onchange="handleChange()"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option value="">select</option>
+        </select>
+
+        <br />
+
+        <select
+          id="list2"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option value="">select</option>
+        </select>
+
+        <br />
+        <button
+          onclick="carSearch(removeCarousel())"
+          type="button"
+          class="btn btn-success"
+        >
+          Search
+        </button>
+       
+    </nav>
+
+    <br />
+
+    <div
+      id="carShowroomCarousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carShowroomCarousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carShowroomCarousel"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carShowroomCarousel"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://media.licdn.com/dms/image/v2/D4D12AQFDb4tqHVUrPg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1658929351107?e=2147483647&v=beta&t=47oa8FLg4U9uqw-gCYNl5EBvQPXaAopf6cAww-x2Gpc"
+            class="d-block w-100"
+            alt="Luxury Car"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Luxury Redefined</h5>
+            <p>Experience the ultimate comfort and style.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://www.shutterstock.com/image-photo/moscow-russia-july-21-2017-600nw-724670668.jpg"
+            class="d-block w-100"
+            alt="Sports Car"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Speed & Performance</h5>
+            <p>Unleash the power of modern engineering.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://blog-cdn.el.olx.com.pk/wp-content/uploads/2022/06/14105816/resale-value-survey-O-1024x576.jpg"
+            class="d-block w-100"
+            alt="SUV Car"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Adventure Awaits</h5>
+            <p>Perfect for any road, any journey.</p>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carShowroomCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carShowroomCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="card-container d-flex flex-wrap gap-4 m-4" id="card-container">
+      <div class="card" style="width: 18rem">
+        <img src="" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-light pt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5 class="text-uppercase">Auto Service</h5>
+            <p>
+              Your trusted destination for luxury and premium cars. Explore our
+              latest collection.
+            </p>
+          </div>
+
+          <div class="col-md-4">
+            <h5 class="text-uppercase">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Inventory</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h5 class="text-uppercase">Contact Us</h5>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> R4J4+F69, Allah Wala Town
+              Sector 31 A Korangi, Karachi
+            </p>
+            <p><i class="fas fa-phone"></i> 03130175328</p>
+            <p><i class="fas fa-envelope"></i> carService@gmail.com</p>
+
+            <div class="mt-3">
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-facebook fa-lg"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-instagram fa-lg"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="fab fa-linkedin fa-lg"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 border-top pt-3">
+          <p>2025 Car Showroom | Made by <strong>Ayan Habib.</strong></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
